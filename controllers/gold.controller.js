@@ -1,10 +1,9 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
+const { URL_FOR_GOLDS } = require("../public/urls");
 
 module.exports.getGoldsInfosV1 = function(req, res) {
-  const url = "https://portal-widgets-v3.foreks.com/gold";
-
-  axios(url)
+  axios(URL_FOR_GOLDS)
     .then(response => {
       const html = response.data;
       const $ = cheerio.load(html);
