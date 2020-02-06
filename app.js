@@ -12,6 +12,7 @@ app.options("*", cors());
 
 //Routes
 app.use(require("./routes/index.routes"));
+app.use(require("./routes/gold-prices.routes"));
 
 app.listen(8080, () => {
   console.log("Running on 8080");
